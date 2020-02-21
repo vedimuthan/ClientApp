@@ -22,10 +22,10 @@ public class containerTest {
     public void setupTest (){
         //Create a new ChromeDriver
     	ChromeOptions options = new ChromeOptions();
-      	options.addArguments("no-sandbox");
-  		options.addArguments("single-process");
-  		options.addArguments("start-maximized");         // open Browser in maximized mode
-  		options.addArguments("disable-infobars");        // disabling infobars
+      	options.addArguments("--no-sandbox");
+  		options.addArguments("--single-process");
+  		options.addArguments("--start-maximized");         // open Browser in maximized mode
+  		options.addArguments("--disable-infobars");        // disabling infobars
       	options.addArguments("--headless");
       	options.addArguments("--disable-gpu");
       	options.addArguments("'window-size=1024,768'");
