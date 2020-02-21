@@ -25,8 +25,22 @@ pipeline {
     }
     stage('BUILD') {
       steps {
-        sh 'mvn clean install sonar:sonar'
+        withSonarQubeEnv('sonarqube') {
+        sh 'mvn clean deploy sonar:sonar'
+        }
       }
+    }
+    stage('Quality Gate') {
+      steps {
+        timeout(time: 1, unit: 'MINUTES') {
+        script {
+           def qualitygate = waitForQualityGate()
+           if (qualitygate.status != "OK") {
+                   error "Pipeline aborted due to quality gate failure: ${qualitygate.status}"
+               }
+            }
+          }
+       }
     }
     stage('TEST') {
       steps {
