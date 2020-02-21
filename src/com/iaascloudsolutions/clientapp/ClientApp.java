@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ClientApp
  */
-@WebServlet("/clientApp")
+@WebServlet("/clientapp")
 public class ClientApp extends HttpServlet {
     private static final long serialVersionUID = 1L;
-      
+
     /**
      * @see HttpServlet#HttpServlet()
      */
