@@ -33,11 +33,11 @@ public class containerTest {
           options.addArguments("--incognito");
           options.addArguments("enable-automation");
           options.addArguments("--disable-extensions");
-          options.addArguments("--dns-prefetch-disable");      
+          options.addArguments("--dns-prefetch-disable");
     options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 
     	//options.setExperimentalOption(useAutomationExtension, false);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         //System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
         //Go to www.swtestacademy.com
