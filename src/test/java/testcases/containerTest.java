@@ -35,6 +35,7 @@ public class containerTest {
           options.addArguments("--disable-extensions");
           options.addArguments("--dns-prefetch-disable");
     options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+    options.setExperimentalOption("useAutomationExtension", false);
 
     	//options.setExperimentalOption(useAutomationExtension, false);
         driver = new ChromeDriver(options);
