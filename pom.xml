@@ -89,4 +89,8 @@
       <url>http://ec2-3-80-250-193.compute-1.amazonaws.com:8081/repository/maven-releases/</url>
     </repository>
   </distributionManagement>
+  <properties>
+    <sonar.sources>src/com</sonar.sources>
+    <sonar.tests>src/test/java</sonar.tests>
+</properties>
 </project>
